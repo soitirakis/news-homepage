@@ -20,9 +20,9 @@ for (let item of asideNewsArticle) {
 
 
 let footerArticleData = [
-  {title: 'reviving retro PCs', paragraph: 'what happens when old PCs are given modern upgrades?'},
-  {title: 'top 10 laptops of 2022', paragraph: 'our best picks for various needs and budgets.'},
-  {title: 'the growth of gaming', paragraph: 'how the pandemic has sparked fresh opportunities.'}
+  {no: '01', title: 'reviving retro PCs', paragraph: 'what happens when old PCs are given modern upgrades?', img:'img/image-retro-pcs.jpg'},
+  {no: '02', title: 'top 10 laptops of 2022', paragraph: 'our best picks for various needs and budgets.', img: 'img/image-top-laptops.jpg'},
+  {no: '03', title: 'the growth of gaming', paragraph: 'how the pandemic has sparked fresh opportunities.', img:'img/image-gaming-growth.jpg'}
 ]
 
 let templateFooter = document.querySelector('#footer-article-data').content;
@@ -33,6 +33,8 @@ for (let item of footerArticleData) {
 
   footerCardItem.querySelector('.card-footer-title').textContent = item.title;
   footerCardItem.querySelector('.card-footer-description').textContent = item.paragraph;
+  footerCardItem.querySelector('.footer-image').setAttribute('src', item.img);
+  footerCardItem.querySelector('.footer-card-counter').textContent = item.no;
 
   footerCards.appendChild(footerCardItem);
 }

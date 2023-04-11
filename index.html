@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header>
+    <header class='page-main-header'>
       <nav>
         <ul>
           <li><a href="#">home</a></li>
@@ -21,7 +21,18 @@
     <div class="container">
       <main>
         <div class="card-main-page">
-
+          <picture>
+            <source media='(min-width: 550px)' srcset='img/image-web-3-desktop.jpg'>
+            <img class='main-page-image' src='img/image-web-3-mobile.jpg' alt='Lego picture representing the 3.0 Web'>
+          </picture>
+          <div class="card-main-page-content">
+            <h1 class='card-main-page-title'>the bright </br> future of web</br> 3.0?</h1>
+            <div class="card-main-page-description">
+              <p>We dive into the next evolution of the web that claims to put the power of the
+              platforms back into the hands of the people. But is it really fulfilling its promise?</p>
+              <button class='card-main-page-read-more-button' type="button" name="button">read more</button>
+            </div>
+          </div>
         </div>
       </main>
       <aside class="aside-news">
@@ -31,6 +42,7 @@
             <div class="card-aside-news-article">
               <h3 class='card-aside-news-article-title'></h3>
               <p class="card-aside-news-article-para"></p>
+              <hr>
             </div>
           </template>
           <div id="aside-news-articles-card"></div>
@@ -40,9 +52,13 @@
       <footer>
         <article class="card-footer-article">
           <template id="footer-article-data">
-            <div class="card-footer-article-news">
-              <h3 class="card-footer-title"></h3>
-              <p class="card-footer-description"></p>
+            <div class="footer-card">
+              <img class="footer-image" src="" alt="">
+              <div class="card-footer-article-news">
+                <p class='footer-card-counter'></p>
+                <h3 class="card-footer-title"></h3>
+                <p class="card-footer-description"></p>
+              </div>
             </div>
           </template>
           <div id='footer-aside-card'></div>
