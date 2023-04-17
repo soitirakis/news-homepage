@@ -125,6 +125,10 @@ hr {
   text-transform: capitalize;
   color: var(--very-dark-blue);
 }
+.card-footer-title:hover {
+  color: var(--soft-red);
+  cursor: pointer;
+}
 .card-footer-description {
   align-self: end;
   color: var(--grayish-blue);
@@ -135,16 +139,28 @@ hr {
 /*---responsive device ---- */
 
 @media screen and (min-width: 550px) {
+  body {
+    margin: 0 auto;
+    width: 85%;
+  }
   .container {
     display: grid;
-    grid-template-columns: 75% 25%;
+    grid-template-columns: repeat(3, 33.33%);
     grid-template-areas:
-      'main aside'
-      'footer footer';
+      'main main aside'
+      'footer footer footer';
   }
   main {
     grid-area: main;
-    width: 75%;
+  }
+  .main-page-image {
+    width: 95%;
+    max-width: none;
+  }
+  .card-main-page-content {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    width: 95%;
   }
   .aside-news {
     grid-area: aside;
@@ -154,7 +170,7 @@ hr {
     grid-area: footer;
   }
   #footer-aside-card {
-    display: flex;
-    flex-flow: row nowrap;
+    display: grid;
+    grid-template-columns: repeat(3, 33.33%);
   }
 }
