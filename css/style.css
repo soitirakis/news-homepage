@@ -103,13 +103,32 @@ hr {
   flex-flow: row nowrap;
   margin: 2rem 0;
 }
+.footer-image {
+  width: 75%;
+  max-width: 130px;
+}
 .card-footer-article-news {
   display: grid;
-  padding: 1.5rem;
+  align-content: stretch;
+  padding-left: 1.5rem;
+}
+.footer-card-counter, .card-footer-title , .card-footer-description {
+  margin: 0;
+  flex: 1;
 }
 .footer-card-counter {
+  align-self: flex-start;
   color: var(--grayish-blue);
   font-size: 3rem;
+}
+.card-footer-title {
+  text-transform: capitalize;
+  color: var(--very-dark-blue);
+}
+.card-footer-description {
+  align-self: end;
+  color: var(--grayish-blue);
+  line-height: 1.8;
 }
 
 
