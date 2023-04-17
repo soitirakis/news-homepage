@@ -64,8 +64,10 @@ html, body {
 /*--- aside --*/
 .aside-news {
   background: var(--very-dark-blue);
-  display: flex;
-  flex-flow: column nowrap;
+  /*display: flex;
+  flex-flow: column nowrap;*/
+  display: grid;
+  grid-template-rows: auto 1fr;
   padding: 1.5rem 1rem;
   margin-top: 5rem;
 }
